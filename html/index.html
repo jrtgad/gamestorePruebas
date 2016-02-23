@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>GameStore</title>
+    <meta name="description" content="Servicio de venta de videojuegos">
+    <meta name="keywords" content="juegos pc">
+    <meta name="autor" content="Javier Ruiz-Toledo Gallego">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" href="../html/img/Logo.png">
+    <link rel="stylesheet" type="text/css" href="../html/lib/reset.css">
+    <link rel="stylesheet" type="text/css" href="../html/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../html/css/screen.css">
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <script type="application/javascript" src="../html/lib/prefix_free.js"></script>
+    <script type="application/javascript" src="../html/js/ajax.js"></script>
+    <script type="application/javascript" src="../html/lib/main.min.js"></script>
+    <!--<script type="application/javascript" src="../html/lib/front-end.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../html/lib/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</head>
+
+<body>
+    <main class="container col-md-12 col-sm-12 col-xs-12">
+        <header class="cabecera container col-md-12 col-sm-12 col-xs-12">
+            <a href="../html/index.html" class="container col-md-1 col-sm-2 col-md-offset-1 col-xs-3">
+                <figure class="logo">
+                    <img src="../html/img/Logo.png" id="logo" alt="Logo empresa" longdesc="./description.txt">
+                </figure>
+            </a>
+            <div class="col-md-4 col-sm-4 col-sm-offset-1 container col-md-offset-2 col-xs-9">
+                <a href="../html/index.html" class="h1 titulo">Game</a>
+                <a href="../html/index.html" class="h1 titulo2">Store</a>
+            </div>
+            <section class="login col-md-3 col-sm-3 col-sm-offset-1 col-md-offset-1 invisible">
+                <img src="../html/img/icons/user.png" alt="Imagen user" class="user_img col-md-2 col-sm-2">
+                <div class="container col-md-1 col-sm-1">
+                    <form action="../cgi-bin/index.php" method="post">
+                        <input type="button" class="boton" title="Iniciar sesión" value="Iniciar sesión">
+                        <input type="button" class="boton" title="Registrarse" name="registro" id="register" value="Registrarse">
+                    </form>
+                </div>
+            </section>
+        </header>
+        <nav class="menu container col-md-12 col-sm-12 col-xs-12" id="spy">
+            <ul class="menu navbar container navbar-fixed-top col-md-12 col-sm-12 col-xs-12">
+                <li class="menu_categoria container col-md-2 col-sm-2 h2 col-xs-3">
+                    <a href="#" class="dropdown-toggle col-md-1 col-sm-1 centered" data-toggle="dropdown" id="dropdownMenuCategorias">
+                        Categorías
+                    </a>
+                    <div class="dropdown-menu submenu col-md-12 col-sm-12">
+                        <ul class="col-md-12 col-sm-12 centered">
+                            <li class="col-md-11 col-sm-11 container">
+                                <a href="#" class="col-sm-3 centered">Acción</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Aventuras</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Carreras</a></li>
+                        </ul>
+                        <ul class="col-md-12 col-sm-12 centered">
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Deportes</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Estrategia</a></li>
+                            <li class="col-md-11 centered col-sm-11 container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Rogue-Like</a></li>
+                        </ul>
+                        <ul class="col-md-12 col-sm-12 centered">
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Rol</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Simuladores</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3 centered">Terror</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_promociones container col-md-2 col-sm-2 col-sm-2 col-xs-3 centered">
+                    <a href="#" class="col-md-1 col-sm-1 col-sm-1 dropdown-toggle" data-toggle="dropdown" id="dropdownMenuOfertas">
+                        Ofertas
+                    </a>
+                    <div class="dropdown-menu submenu col-md-12 col-sm-12 col-xs-12">
+                        <ul class="col-md-11 col-sm-12 centered">
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3">Menos de 5€</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3">Menos de 10€</a></li>
+                            <li class="col-md-11 col-sm-11 centered container">
+                                <a href="#" class="col-md-3 col-sm-3">Menos de 20€</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_reservas container col-md-2 col-sm-2 col-xs-3 centered">
+                    <a href="#" class="col-md-1 col-sm-1">Novedades</a>
+                </li>
+                <li class="menu_ofertas container col-md-2 col-sm-2 col-sm-2 col-xs-3 centered">
+                    <a href="#" class="col-md-1 col-sm-1">Reservas</a>
+                </li>
+                <li class="menu_buscar container col-md-4 col-sm-4 col-xs-12 centered" id="searchLi">
+                    <div class="col-md-12 col-sm-12 col-xs-12 input-group">
+                        <input type="text" class="form-control" placeholder="Search" id="inputSearch" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" id="lupa">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 input-group items" id="items">
+                        <ul id="searchList" class="col-md-12 col-sm-12 col-xs-12"></ul>
+                    </div>
+                    <div class="col-xs-7 invisible-sm invisible-md">
+                        <input type="button" title="" value="Iniciar sesión">
+                        <input type="button" value="Registrarse">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="cuerpo container col-md-12 col-sm-12 col-xs-12">
+            <section class="presentacion col-xs-12" id="presentacion">
+                <section class="ofertas container col-md-12 col-sm-12 col-xs-12" id="ofertas">
+                    <span class="col-md-12 col-sm-12">Ofertas</span>
+                    <div class="container col-md-12 col-sm-12 col-xs-12">
+                        <ul class="col-md-12 col-sm-12 container col-xs-12">
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac">
+                                <h4>The Binding of Isaac</h4>
+                                <div class="precio">8.95€</div>
+                                <div class="descuento">8%</div>
+                                <div class="categoria invisible">Rogue-Like</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                    <img src="../html/img/icons/linux.png" alt="Linux" longdesc="./description.txt">
+                                    <img src="../html/img/icons/apple.png" alt="IOS" longdesc="./description.txt">
+                                </div>
+                            </li>
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Deportes/fifa16.jpg" alt="FIFA 16" longdesc="./description.txt">
+                                <h4>FIFA 16</h4>
+                                <div class="categoria invisible invisible-sm">Deportes</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                                <div class="precio">24.50€</div>
+                                <div class="descuento">15%</div>
+                            </li>
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Aventuras/monkeyisland.jpg" alt="Monkey Island" longdesc="./description.txt">
+                                <h4>Monkey Island</h4>
+                                <div class="precio">3.40€</div>
+                                <div class="categoria invisible">Aventuras</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                                <div class="descuento">50%</div>
+                            </li>
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Estrategia/starcraft2.jpg" alt="Starcraft 2" longdesc="./description.txt">
+                                <h4>Starcraft 2</h4>
+                                <div class="precio">12.99€</div>
+                                <div class="categoria invisible">Estrategia</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                                <div class="descuento">10%</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="novedades container col-md-12 col-sm-12 col-xs-12" id="novedades">
+                    <span class="col-md-12 col-sm-12 col-xs-12">Novedades</span>
+                    <div class="container col-md-12 col-sm-12 col-xs-12">
+                        <ul class="container col-md-12 col-sm-12 col-xs-12">
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Rol/fallout4.jpg" alt="Fallout 4" longdesc="./description.txt">
+                                <h4>Fallout 4</h4>
+                                <div class="precio">45.50€</div>
+                                <div class="categoria invisible">Rol</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                            </li>
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Accion/GTA.jpg" alt="Gran Theft Auto 5" longdesc="./description.txt">
+                                <h4>Gran Theft Auto 5</h4>
+                                <div class="precio">52.10€</div>
+                                <div class="categoria invisible">Acción</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                            </li>
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3" longdesc="./description.txt">
+                                <h4>Dirt 3</h4>
+                                <div class="precio">35.95€</div>
+                                <div class="categoria invisible">Carreras</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                            </li>
+                            <li class="box col-md-2 col-sm-2">
+                                <img src="../html/img/Fotos/Simuladores/cities.jpg" alt="Cities Skylines" longdesc="./description.txt">
+                                <h4>Cities Skylines</h4>
+                                <div class="precio">28.30€</div>
+                                <div class="categoria invisible">Simuladores</div>
+                                <div class="so">
+                                    <img src="../html/img/icons/windows.png" alt="Windows" longdesc="./description.txt">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="">
+                <div class="categorias col-md-10 container col-md-offset-1 col-xs-12 col-xs-offset-0" id="categorias">
+                    <ul class="col-md-12">
+                        <li id="acción" class="col-md-4 col-sm-4 col-xs-12 col-xs-offset-0">
+                            <h4 class="noMargin">Acción</h4>
+                            <img src="../html/img/Fotos/Accion/GTA.jpg" alt="GTA V" longdesc="./description.txt">
+                        </li>
+                        <li id="aventura" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Aventura</h4>
+                            <img src="../html/img/Fotos/Aventuras/monkeyisland.jpg" alt="Monkey Island" longdesc="./description.txt">
+                        </li>
+                        <li id="carreras" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Carreras</h4>
+                            <img src="../html/img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3" longdesc="./description.txt">
+                        </li>
+                    </ul>
+                    <ul class="col-md-12">
+                        <li id="deportes" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Deportes</h4>
+                            <img src="../html/img/Fotos/Deportes/fifa16.jpg" alt="Fifa 16" longdesc="./description.txt">
+                        </li>
+                        <li id="estrategia" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Estrategia</h4>
+                            <img src="../html/img/Fotos/Estrategia/starcraft2.jpg" alt="Starcraft 2" longdesc="./description.txt">
+                        </li>
+                        <li id="rogue-like" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Rogue-Like</h4>
+                            <img src="../html/img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac" longdesc="./description.txt">
+                        </li>
+                    </ul>
+                    <ul class="col-md-12">
+                        <li id="rol" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Rol</h4>
+                            <img src="../html/img/Fotos/Rol/fallout4.jpg" alt="Fallout 4" longdesc="./description.txt">
+                        </li>
+                        <li id="simuladores" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Simuladores</h4>
+                            <img src="../html/img/Fotos/Simuladores/cities.jpg" alt="Cities Skyline" longdesc="./description.txt">
+                        </li>
+                        <li id="terror" class="col-md-4 col-sm-4 col-xs-12">
+                            <h4 class="noMargin">Terror</h4>
+                            <img src="../html/img/Fotos/Terror/Deadspace3.png" alt="Dead Space 3" longdesc="./description.txt">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <footer class="container col-md-12 col-sm-12 invisible">
+            <section class="rrss">
+                <ul class="container col-md-9 col-sm-9 col-sm-offset-3 col-md-offset-3">
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="xbox"></div>
+                    </li>
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="steam"></div>
+                    </li>
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="reddit"></div>
+                    </li>
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="google"></div>
+                    </li>
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="twitter"></div>
+                    </li>
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="facebook"></div>
+                    </li>
+                    <li class="container col-md-1 col-sm-1">
+                        <div class="youtube"></div>
+                    </li>
+                </ul>
+            </section>
+            <section class="condiciones col-md-12 col-sm-12 invisible">
+                <div class="container col-md-9 col-sm-12 col-md-offset-3">
+                    <ul class="col-md-9 col-sm-12 text-center">
+                        <li class="container col-md-3 col-sm-4"><span>Aviso legal</span></li>
+                        <li class="container col-md-3 col-sm-4"><span>Privacidad</span></li>
+                        <li class="container col-md-3 col-sm-4"><span>Condiciones de venta</span></li>
+                    </ul>
+                    <ul class="col-md-9 col-sm-12 text-center">
+                        <li class="container col-md-3 col-sm-4"><span>Contacto</span></li>
+                        <li class="container col-md-3 col-sm-4"><span>Métodos de pago</span></li>
+                        <li class="container col-md-3 col-sm-4"><span>Derechos de uso</span></li>
+                    </ul>
+                    <ul class="col-md-9 col-sm-12 text-center">
+                        <li class="container col-md-3 col-sm-4"><span>Devoluciones</span></li>
+                        <li class="container col-md-3 col-sm-4">
+                            <article class="tarjetas">
+                                <img src="../html/img/pago/Paypal.png" alt="Paypal" longdesc="./description.txt">
+                                <img src="../html/img/pago/maestro.jpg" alt="Maestro" longdesc="./description.txt">
+                                <img src="../html/img/pago/MasterCard.png" alt="Mastercard" longdesc="./description.txt">
+                                <img src="../html/img/pago/visa.png" alt="Visa" longdesc="./description.txt">
+                            </article>
+                        </li>
+                        <li class="container col-md-3 col-sm-4"><span>Sube tu juego</span></li>
+                    </ul>
+                </div>
+            </section>
+            <!--<section class="copyright container col-md-12 col-sm-12 col-md-12 col-sm-12 col-md-offset-3">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+                </a>
+                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+                        GameStore
+                    </span> by
+                <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
+                        Javier Ruiz-Toledo
+                    </span> is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        Creative Commons Reconocimiento 4.0 Internacional License
+                    </a>
+                <br /> Octubre 2015 GameStore S.L. Todos los derechos reservados
+            </section>-->
+        </footer>
+    </main>
+</body>
+
+</html>

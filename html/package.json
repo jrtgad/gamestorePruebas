@@ -1,0 +1,30 @@
+{
+  "name": "Validate_Form",
+  "description": "Sample to validate a register form",
+  "license": "ISC",
+  "version": "0.0.1",
+  "author": "Javier Ruiz-Toledo Gallego",
+  "keywords": [
+    "sample",
+    "js",
+    "karma"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jrtgad/Javascript.git"
+  },
+  "dependencies" : {
+        "grunt": ">=0.4.0",
+        "grunt-cli": ">=0.1.13",
+        "mocha": "^2.3.4",
+        "chai": "latest",
+        "showdown": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-jslint": "latest",
+        "grunt-contrib-less": "latest",
+        "grunt-mocha-test": "latest",
+        "grunt-markdown": "latest",
+        "grunt-contrib-watch": "latest"
+    }
+}

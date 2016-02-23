@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <title>GameStore</title>
+    <meta name="description" content="Servicio de venta de videojuegos">
+    <meta name="keywords" content="juegos pc">
+    <meta name="autor" content="Javier Ruiz-Toledo Gallego">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" href="../html/img/Logo.png">
+    <link rel="stylesheet" href="../html/css/screen.css">
+    <link rel="stylesheet" href="../html/css/reset.css">
+    <script type="text/javascript" src="../html/lib/front-end.min.js"></script>
+    <link type="text/plain" rel="author" href="humans.txt" />
+</head>
+
+<body>
+    <div id="modalCookies">
+        <p>Este sitio utiliza cookies</p>
+        <p>para una mejor experiencia</p>
+        <p id="cookies">Entendido</p>
+    </div>
+    <main>
+        <header class="cabecera">
+            <a href="../html/index.html">
+                <figure class="logo">
+                    <img src="../html/img/Logo.png" alt="Logo empresa">
+                </figure>
+            </a>
+            <a href="../html/index.html" class="titulo">
+                Game</a>
+            <a class="titulo2" href="../html/index.html">Store</a>
+            <section class="login">
+                <form action="../cgi-bin/index.php" method="POST">
+                    <img src="../html/img/icons/user.png" alt="Imagen user" class="user_img">
+                    <input type="button" class="boton" value="Iniciar sesión">
+                    <input type="submit" class="boton" name="registro" value="Registrarse">
+                </form>
+            </section>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li class="menu_categoria">
+                    <a href="#">Categorías</a>
+                </li>
+                <li class="menu_promociones">
+                    <a href="#">Promociones</a>
+                </li>
+                <li class="menu_mods">
+                    <a href="#">Mods</a>
+                </li>
+                <li class="menu_gratuito">
+                    <a href="#">Gratuitos</a>
+                </li>
+                <li class="menu_buscar">
+                    <div class="search_input">
+                        <input type="text">
+                        <img src="../html/img/icons/search.png" alt="Lupa">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="cuerpo">
+            <div class="registro" id="registro">
+                <h1>NUEVO USUARIO</h1>
+                <h2>Los campos marcados con <span class="redMSG">*</span> son obligatorios<h2>
+                <form method="POST">
+                    <div class="izq">
+                        <ul id="titlesForm">
+                            <li class="asterisk">Nombre y apellidos:</li>
+                            <li class="asterisk">Dirección de e-mail:</li>
+                            <li class="asterisk">Contraseña:</li>
+                            <li class="asterisk">Repita la contraseña:</li>
+                            <li class="asterisk">Acepto las condiciones de uso:</li>
+                            <li>Dirección web:</li>
+                            <li>Dirección domicilio:</li>
+                            <li>País:</li>
+                            <li class="hidden">Código Postal:</li>
+                        </ul>
+                    </div>
+                    <div class="dcha">
+                        <ul id="inputsForm">
+                            <li><input type="text" name="data[userName]" id="userName" placeholder="Introduzca sólo letras o guiones" class="reset"></li>
+                            <li><input type="text" name="data[userMail]" id="userMail" placeholder="Ej: a.b@c.d.es"  class="reset"></li>
+                            <li><input type="password" name="data[pass]" id="pass" placeholder="Ej: 1$abcABC"  class="reset"></li>
+                            <li><input type="password" name="data[passConfirmation]" id="passConfirmation" class="reset" placeholder="Repita la contraseña"></li>
+                            <li>
+                                <input type="checkbox"
+                                    name="data[siteConditions]"
+                                    value="AcceptConditions"
+                                    class="required" id="checkbox" class="reset">
+                            </li>
+                            <li><input type="text" name="data[url]" id="url" class="reset"></li>
+                            <li><input type="text" name="data[address]" id="address" class="reset"></li>
+                            <li>
+                                <select name="data[country]" id="country"></select>
+                            </li>
+                            <li>
+                                <input type="text" name="data[postalCode]" id="postalCode"  class="hidden reset">
+                            </li>
+                        </ul>
+                    </div><br/><br/>
+                    <div class="resto">
+                        <textarea id="comments" placeholder="Escriba aquí sus dudas o sugerencias"
+                            name="data[comments]"></textarea>
+                        <input type="button" id="limpiar" value="Limpiar" class="boton">
+                        <input type="button" id="send" value="Registrarse" class="boton">
+                        <br/><br/>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <section class="rrss">
+                <ul>
+                    <li>
+                        <div class="xbox"></div>
+                    </li>
+                    <li>
+                        <div class="steam"></div>
+                    </li>
+                    <li>
+                       <div class="reddit"></div>
+                   </li>
+                   <li>
+                       <div class="google"></div>
+                    </li>
+                    <li>
+                       <div class="twitter"></div>
+                    </li>
+                    <li>
+                       <div class="facebook"></div>
+                    </li>
+                    <li>
+                       <div class="youtube"></div>
+                    </li>
+                </ul>
+                </section>
+                <section class="condiciones">
+                    <ul>
+                        <li><span>Aviso legal</span></li>
+                        <li><span>Privacidad</span></li>
+                        <li><span>Condiciones de venta</span></li>
+                        <li><span>Contacto</span></li>
+                        <li><span>Métodos de pago</span></li>
+                        <li><span>Derechos de uso</span></li>
+                        <li><span>Devoluciones</span></li>
+                        <li>
+                            <article class="tarjetas">
+                                <img src="../html/img/pago/Paypal.png" alt="Paypal">
+                                <img src="../html/img/pago/maestro.jpg" alt="Maestro">
+                                <img src="../html/img/pago/MasterCard.png" alt="Mastercard">
+                                <img src="../html/img/pago/visa.png" alt="Visa">
+                            </article>
+                        </li>
+                        <li><span>Sube tu juego</span></li>
+                    </ul>
+                </section>
+                <section class="copyright">
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        <img alt="Licencia de Creative Commons" style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+                    </a>
+                    <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+                        GameStore
+                    </span>
+                        by
+                     <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
+                        Javier Ruiz-Toledo
+                    </span>
+                        is licensed under a
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        Creative Commons Reconocimiento 4.0 Internacional License
+                    </a><br />
+                        Octubre 2015 GameStore S.L. Todos los derechos reservados
+                </section>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Fco. Javier Ruiz-Toledo Madrid, Spain
+    ---- Developer, The Helped One
+
+# THANKS
+
+    David Villaluenga Madrid, Spain
+    ---- The Mind
+
+    Sergio Asenjo Madrid, Spain
+    ---- Supporter, BrainStorming ideas
+
+    Joao Ortiz Madrid, Spain
+    ---- The Vision
+
+# SITE
+
+Last update: 2015/11/15
+Language: Castellano
+Doctype:HTML5
+IDE: Sublime-text2, Mozilla Firefox, Adobe photoshop, Gimp
+SO: Ubuntu 14.04
